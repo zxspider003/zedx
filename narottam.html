@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZED X // PERSONNEL FILE: NAROTTAM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <style>
+        :root { --neon: #008cff; --bg: #050505; --panel: rgba(255, 255, 255, 0.02); }
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: crosshair; }
+        body {
+            background: var(--bg); color: #fff; font-family: 'JetBrains Mono', monospace;
+            min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px;
+            background-image: radial-gradient(circle at 50% 50%, rgba(0, 140, 255, 0.08) 0%, transparent 70%),
+                linear-gradient(rgba(0, 140, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 140, 255, 0.05) 1px, transparent 1px);
+            background-size: 100% 100%, 50px 50px, 50px 50px;
+        }
+        .dossier-card {
+            width: 100%; max-width: 900px; background: var(--panel); border: 1px solid var(--neon);
+            backdrop-filter: blur(15px); display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            position: relative; box-shadow: 0 0 50px rgba(0, 140, 255, 0.2);
+        }
+        .dossier-card::before {
+            content: 'TACTICAL_INTELLIGENCE_CONFIRMED';
+            position: absolute; top: -12px; left: 30px; background: var(--neon);
+            color: white; font-size: 10px; padding: 2px 12px; letter-spacing: 3px; font-weight: bold;
+        }
+        .left-sector { padding: 40px; border-right: 1px solid rgba(0, 140, 255, 0.2); background: rgba(0, 140, 255, 0.03); display: flex; flex-direction: column; align-items: center; }
+        .right-sector { padding: 40px; display: flex; flex-direction: column; }
+        .avatar-frame {
+    width: 220px;
+    height: 220px;
+    border: 2px solid var(--neon-color); /* Use the specific color variable for that page */
+    background: #000;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden; /* This is vital to hide the parts of the photo that don't fit */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* This forces the image to fill the square completely */
+    object-position: top;    /* This ensures it focuses on the face, not the shirt */
+}
+
+        h1 { font-family: 'Orbitron', sans-serif; font-size: 2.2rem; letter-spacing: 4px; color: #fff; margin-bottom: 5px; text-transform: uppercase; }
+        .uid-tag { font-size: 11px; color: var(--neon); margin-bottom: 30px; letter-spacing: 2px; }
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 35px; }
+        .stat-box { border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 12px; }
+        .label { font-size: 10px; color: #888; text-transform: uppercase; }
+        .value { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; color: var(--neon); display: block; }
+        .bio-text { font-size: 0.85rem; line-height: 1.6; color: #ccc; margin-bottom: 30px; }
+        .btn-back { margin-top: auto; text-decoration: none; color: #fff; border: 1px solid var(--neon); padding: 15px; text-align: center; font-family: 'Orbitron', sans-serif; font-size: 11px; letter-spacing: 4px; transition: 0.4s; }
+        .btn-back:hover { background: var(--neon); color: #fff; box-shadow: 0 0 30px var(--neon); }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    </style>
+</head>
+<body>
+    <div class="dossier-card">
+        <div class="left-sector">
+            <div class="avatar-frame">
+    <img src="narottam.jpg" alt="MR_NAROTTAM">
+</div>
+
+            <div class="stat-box" style="width: 100%; text-align: center;">
+                <span class="label">LEVEL</span>
+                <span class="value">51</span>
+            </div>
+            <p style="margin-top: 20px; font-size: 9px; opacity: 0.8; color: var(--neon);">ROLE: ELITE STRATEGIST</p>
+        </div>
+        <div class="right-sector">
+            <p style="color: var(--neon); font-size: 0.7rem; letter-spacing: 3px; margin-bottom: 5px;">// NAROTTAM_BRAIN_CORE</p>
+            <h1>MR_NAROTTAM</h1>
+            <div class="uid-tag">UID: 8409436524</div>
+            <div class="stat-grid">
+                <div class="stat-box"><span class="label">K/D Ratio</span><span class="value">3.95</span></div>
+                <div class="stat-box"><span class="label">Headshot %</span><span class="value">64.2%</span></div>
+                <div class="stat-box"><span class="label">Total Likes</span><span class="value">2,840</span></div>
+                <div class="stat-box"><span class="label">Position</span><span class="value" style="font-size: 0.8rem;">Tactical Lead</span></div>
+            </div>
+            <p class="label">Speciality</p>
+            <p class="bio-text">
+                <span style="color: var(--neon);">[ TACTICAL SUPPORT ]</span><br>
+                Narottam is the analytical force of the squad. Specializing in map rotation and equipment management, he ensures the guild is always three steps ahead of the enemy.
+            </p>
+            <a href="index.html" class="btn-back">RETURN TO COMMAND</a>
+        </div>
+    </div>
+</body>
+</html>

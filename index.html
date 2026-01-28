@@ -1,0 +1,256 @@
+
+<!DOCTYPE html> <html lang="en"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZED X // TITAN CORE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-red: #ff003c;
+            --neon-blue: #00f2ff;
+            --bg-black: #050505;
+            --panel-glass: rgba(255, 255, 255, 0.03);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: crosshair; }
+
+        body {
+            background: var(--bg-black);
+            color: #fff;
+            font-family: 'JetBrains Mono', monospace;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            /* Deep Space Background */
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(255, 0, 60, 0.05) 0%, transparent 70%),
+                linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 100% 100%, 50px 50px, 50px 50px;
+        }
+
+        /* 4K Header - Pinned to Top */
+        header {
+            width: 100%;
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--neon-red);
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(20px);
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: clamp(1.5rem, 5vw, 3.5rem);
+            letter-spacing: 15px;
+            color: #fff;
+            text-shadow: 0 0 20px var(--neon-red);
+        }
+
+        /* The Dashboard Engine */
+        .main-engine {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 3rem 5%;
+            flex-grow: 1;
+        }
+
+        .data-panel {
+            background: var(--panel-glass);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel-label {
+            color: var(--neon-red);
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Fixed Name Display - NO CLIPPING */
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .member-link {
+            text-decoration: none;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 3px solid var(--neon-blue);
+            padding: 1.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            transition: 0.4s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .member-link:hover {
+            background: rgba(0, 242, 255, 0.1);
+            border-left: 10px solid var(--neon-blue);
+            padding-left: 2rem;
+        }
+
+        .member-link::after {
+            content: "CONNECTED";
+            font-size: 0.6rem;
+            color: var(--neon-blue);
+            opacity: 0.5;
+        }
+
+        /* Kinetic Effects */
+        .scanline {
+            position: fixed;
+            width: 100%;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            top: 0;
+            animation: scan 6s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes scan {
+            from { top: 0; }
+            to { top: 100vh; }
+        }
+
+        .btn-deploy {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: transparent;
+            border: 1px solid var(--neon-red);
+            color: var(--neon-red);
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-deploy:hover {
+            background: var(--neon-red);
+            color: #fff;
+            box-shadow: 0 0 30px var(--neon-red);
+        }
+
+        @media (max-width: 768px) {
+            .logo { letter-spacing: 5px; }
+            .main-engine { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanline"></div>
+
+    <header>
+        <div class="logo">ZED X</div>
+        <div style="text-align: right; opacity: 0.6; font-size: 0.7rem;">
+            SYSTEM_STATUS: STABLE<br>
+            VERSION: 100.0 // 2026
+        </div>
+    </header>
+
+    <div class="main-engine">
+        <div class="data-panel" style="border-color: var(--neon-blue);">
+    <div class="data-panel" style="border-color: #008cff;">
+    <div class="panel-label">// GUILD_DATABASE_V1.0</div>
+    
+    <div style="text-align: center; padding: 15px 0;">
+        <h2 style="font-family: 'Orbitron'; letter-spacing: 5px; color: #fff; text-shadow: 0 0 10px #008cff;">ZED <span style="color: #008cff;">X</span></h2>
+        <p style="font-size: 0.6rem; letter-spacing: 3px; color: #888; margin-top: 5px;">JAI ODISHA • JAI MAHAKAL</p>
+    </div>
+
+    <div style="font-size: 0.7rem; border-top: 1px solid #333; padding-top: 10px;">
+        <p style="margin-bottom: 5px;"><span style="color: #666;">LOCATION:</span> INDIA, ODISHA (JHARSUGUDA)</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-bottom: 10px;">
+            <div style="background: #111; padding: 5px; border: 1px solid #222; text-align: center;">
+                <p style="font-size: 0.5rem; color: #666;">BR RANK</p>
+                <p style="color: #008cff;">DIAMOND</p>
+            </div>
+            <div style="background: #111; padding: 5px; border: 1px solid #222; text-align: center;">
+                <p style="font-size: 0.5rem; color: #666;">CS RANK</p>
+                <p style="color: #008cff;">DIAMOND</p>
+            </div>
+        </div>
+
+        <a href="apply.html" style="display: block; width: 100%; padding: 10px; border: 1px solid #008cff; color: #008cff; text-decoration: none; text-align: center; font-family: 'Orbitron'; font-size: 10px; letter-spacing: 2px; margin-top: 10px; background: rgba(0, 140, 255, 0.1);">
+            INITIALIZE APPLICATION _
+        </a>
+    </div>
+</div>
+
+<a href="apply.html" style="display:block; text-align:center; padding:10px; background:var(--neon-blue); color:black; text-decoration:none; font-weight:bold; margin-top:10px;">
+    CLICK TO APPLY
+</a>
+    
+    <div style="text-align: center; padding: 15px 0;">
+        <h2 style="font-family: 'Orbitron'; letter-spacing: 5px; color: #fff; text-shadow: 0 0 10px var(--neon-blue);">ZED <span style="color: var(--neon-blue);">X</span></h2>
+        <p style="font-size: 0.6rem; letter-spacing: 3px; color: #888; margin-top: 5px;">JAI ODISHA • JAI MAHAKAL</p>
+    </div>
+
+    <div style="font-size: 0.7rem; border-top: 1px solid #333; padding-top: 10px;">
+        <p style="margin-bottom: 5px;"><span style="color: #666;">LOCATION:</span> INDIA, ODISHA (JHARSUGUDA)</p>
+        <p style="color: var(--neon-blue); font-weight: bold; margin-bottom: 10px;">[ ABOUT THIS GUILD ]</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-bottom: 15px;">
+            <div style="background: #111; padding: 5px; border: 1px solid #222;">
+                <p style="font-size: 0.5rem; color: #666;">MIN LEVEL</p>
+                <p style="color: var(--neon-blue);">30+</p>
+            </div>
+            <div style="background: #111; padding: 5px; border: 1px solid #222;">
+                <p style="font-size: 0.5rem; color: #666;">BR / CS RANK</p>
+                <p style="color: var(--neon-blue);">DIAMOND</p>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+            <span style="background: var(--neon-blue); color: #000; font-size: 10px; padding: 2px 5px; font-weight: bold;">COMPETITIVE</span>
+            <span style="background: var(--neon-blue); color: #000; font-size: 10px; padding: 2px 5px; font-weight: bold;">BATTLE_ROYAL</span>
+            <span style="background: var(--neon-blue); color: #000; font-size: 10px; padding: 2px 5px; font-weight: bold;">CLASH_SQUAD</span>
+        </div>
+    </div>
+</div>
+
+        <div class="data-panel" style="flex-grow: 2;">
+            <div class="panel-label">// SQUAD_MEMBERS</div>
+            <div class="team-grid">
+                <a href="supremezx.html" class="member-link">SUPREMEZX</a>
+                <a href="pharaoh.html" class="member-link">ZX_PHAROAH</a>
+                <a href="hunter.html" class="member-link">ZX_HUNTER</a>
+                <a href="flexy.html" class="member-link">ZX_FLEXY_R7</a>
+                <a href="narottam.html" class="member-link">MR_NAROTTAM</a>
+                <a href="chotu.html" class="member-link">ZX_CHOTU</a>
+            </div>
+        </div>
+
+        <div class="data-panel">
+            <div class="panel-label">// LIVE_DIAGNOSTICS</div>
+            <div style="margin-bottom: 1rem;">
+                <p style="font-size: 0.7rem;">CORE_LOAD</p>
+                <div style="width: 100%; height: 5px; background: #222; margin-top: 5px;">
+                    <div style="width: 92%; height: 100%; background: var(--neon-blue);"></div>
+                </div>
+            </div>
+            <button class="btn-deploy" onclick="location.reload()">REBOOT_SYSTEM</button>
+        </div>
+    </div>
+
+</body>
+</html>
+

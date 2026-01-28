@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acting Leader | ZX_PHARAOH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: radial-gradient(circle, #1a1a1a 0%, #050505 100%);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        /* Glassmorphism Profile Card */
+        .bio-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 2px solid #ffd700; /* Gold border for acting leader */
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
+            width: 90%;
+            max-width: 450px;
+        }
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            color: #ffd700; /* Neon Gold */
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .leader-tag {
+            background: #ffd700;
+            color: #000;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            font-size: 0.7rem;
+            padding: 4px 12px;
+            border-radius: 4px;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+        /* Biodata Stats */
+        .stats-container { text-align: left; margin-bottom: 30px; }
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .stat-label { color: #ffd700; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
+        .stat-value { color: #fff; font-weight: 300; }
+        /* Return Button */
+        .home-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #ffd700;
+            border: 1px solid #ffd700;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            transition: 0.4s;
+        }
+        .home-btn:hover {
+            background: #ffd700;
+            color: #000;
+            box-shadow: 0 0 25px #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="bio-card">
+        <h1>ZX_PHARAOH</h1>
+        <div class="leader-tag">ACTING GUILD LEADER</div>
+        <div class="stats-container">
+            <div class="stat-row">
+                <span class="stat-label">Power Level</span>
+                <span class="stat-value">99,999+</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Specialty</span>
+                <span class="stat-value">Combat Strategist</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Fav Aesthetic</span>
+                <span class="stat-value">Cyberpunk Gold</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Style Tip</span>
+                <span class="stat-value">Volume Powder Boost</span>
+            </div>
+        </div>
+        <a href="index.html" class="home-btn">BACK TO HEADQUARTERS</a>
+    </div>
+</body>
+</html>
+

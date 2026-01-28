@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guild Elder | MR_NAROTTAM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: #050505; 
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        /* Glass-Effect Profile Card */
+        .bio-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 2px solid #ff0033; /* Neon Red for Elder rank */
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(255, 0, 51, 0.15);
+            width: 90%;
+            max-width: 450px;
+        }
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            color: #ff0033; /* Neon Red */
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .rank-tag {
+            background: #ff0033;
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            font-size: 0.7rem;
+            padding: 5px 15px;
+            border-radius: 4px;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+        /* Biodata Stats */
+        .stats-container { text-align: left; margin-bottom: 30px; }
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .stat-label { color: #ff0033; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
+        .stat-value { color: #fff; font-weight: 300; }
+        /* Navigation Button */
+        .home-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #ff0033;
+            border: 1px solid #ff0033;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            transition: 0.4s;
+        }
+        .home-btn:hover {
+            background: #ff0033;
+            color: #fff;
+            box-shadow: 0 0 25px #ff0033;
+        }
+    </style>
+</head>
+<body>
+    <div class="bio-card">
+        <h1>MR_NAROTTAM</h1>
+        <div class="rank-tag">GUILD ELDER</div>
+        <div class="stats-container">
+            <div class="stat-row">
+                <span class="stat-label">Member Status</span>
+                <span class="stat-value">Elite Elder</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Specialty</span>
+                <span class="stat-value">Frontline Tank</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Tactics</span>
+                <span>Unstoppable Force</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Grooming</span>
+                <span class="stat-value">Volume Powder / Straight Hair</span>
+            </div>
+        </div>
+        <a href="index.html" class="home-btn">BACK TO BASE</a>
+    </div>
+</body>
+</html>

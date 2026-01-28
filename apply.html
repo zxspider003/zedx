@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZED X // RECRUITMENT_PORTAL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-blue: #00d2ff;
+            --neon-glow: rgba(0, 210, 255, 0.4);
+            --panel-bg: rgba(10, 10, 10, 0.9);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #050505;
+            color: #fff;
+            font-family: 'JetBrains Mono', monospace;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            /* Advanced Tech Grid */
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.1) 0%, transparent 80%),
+                linear-gradient(rgba(0, 210, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 210, 255, 0.05) 1px, transparent 1px);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
+        }
+
+        .portal-frame {
+            width: 100%;
+            max-width: 1000px;
+            background: var(--panel-bg);
+            border: 1px solid rgba(0, 210, 255, 0.3);
+            backdrop-filter: blur(10px);
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 20px var(--neon-glow);
+            position: relative;
+        }
+
+        /* Side Header Section */
+        .side-info {
+            background: rgba(0, 210, 255, 0.05);
+            padding: 40px;
+            border-right: 1px solid rgba(0, 210, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .side-info h1 {
+            font-family: 'Orbitron';
+            font-size: 2.5rem;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-glow);
+            letter-spacing: 5px;
+        }
+
+        .status-badge {
+            font-size: 0.6rem;
+            color: #00ff88;
+            border: 1px solid #00ff88;
+            padding: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Form Content */
+        .form-content { padding: 50px; }
+
+        .form-header {
+            font-family: 'Orbitron';
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--neon-blue);
+            border-bottom: 1px dashed rgba(0, 210, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .input-group { display: flex; flex-direction: column; }
+
+        label {
+            font-size: 0.7rem;
+            color: #666;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        input, select {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 210, 255, 0.2);
+            padding: 12px;
+            color: #fff;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 10px var(--neon-glow);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .full-width { grid-column: span 2; }
+
+        button {
+            margin-top: 40px;
+            width: 100%;
+            padding: 20px;
+            background: transparent;
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            font-family: 'Orbitron';
+            font-size: 1rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            background: var(--neon-blue);
+            color: #000;
+            box-shadow: 0 0 25px var(--neon-blue);
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 850px) {
+            .portal-frame { grid-template-columns: 1fr; }
+            .side-info { border-right: none; border-bottom: 1px solid rgba(0, 210, 255, 0.2); padding: 30px; }
+            .form-content { padding: 30px; }
+            .input-grid { grid-template-columns: 1fr; }
+            .full-width { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portal-frame">
+        <div class="side-info">
+            <div>
+                <h1>ZED X</h1>
+                <div class="status-badge">SYSTEM_ONLINE // RECRUITMENT_V1</div>
+            </div>
+            <p style="font-size: 0.7rem; color: #444; line-height: 1.5;">
+                ENLISTMENT PROTOCOL INITIATED. <br>
+                PLEASE ENTER ACCURATE COMBAT DATA.
+            </p>
+        </div>
+
+        <div class="form-content">
+            <h2 class="form-header">DATA_INPUT_TERMINAL</h2>
+            
+            <form action="certificate.html" method="GET" class="input-grid">
+                <div class="input-group">
+                    <label>Personnel Name</label>
+                    <input type="text" name="name" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <label>Age</label>
+                    <input type="number" name="age" placeholder="Age" required>
+                </div>
+                <div class="input-group">
+                    <label>Game Username</label>
+                    <input type="text" name="user" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <label>Player UID</label>
+                    <input type="text" name="uid" placeholder="UID Number" required>
+                </div>
+                <div class="input-group">
+                    <label>Combat Level</label>
+                    <input type="number" name="lvl" placeholder="Level" required>
+                </div>
+                <div class="input-group">
+                    <label>Highest Rank</label>
+                    <input type="text" name="rank" placeholder="e.g. Master" required>
+                </div>
+                <div class="input-group">
+                    <label>Language Spoken</label>
+                    <input type="text" name="lang" placeholder="Odia/Hindi/Eng" required>
+                </div>
+                <div class="input-group">
+                    <label>Device Specs</label>
+                    <input type="text" name="device" placeholder="e.g. 8GB RAM / SD888" required>
+                </div>
+                
+                <div class="input-group full-width">
+                    <label>Deployment Status</label>
+                    <select name="status">
+                        <option value="Active (Day)">DAY_OPERATIONS (08:00 - 18:00)</option>
+                        <option value="Active (Night)">NIGHT_OPERATIONS (20:00 - 04:00)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="full-width">Finalize Enlistment _</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+

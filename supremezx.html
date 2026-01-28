@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZED X // PERSONNEL FILE: SUPREMEZX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-red: #ff003c;
+            --neon-blue: #00f2ff;
+            --bg-black: #050505;
+            --panel-glass: rgba(255, 255, 255, 0.03);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: crosshair; }
+
+        body {
+            background: var(--bg-black);
+            color: #fff;
+            font-family: 'JetBrains Mono', monospace;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            /* Matching 4K Titan Core Grid */
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(255, 0, 60, 0.05) 0%, transparent 70%),
+                linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 100% 100%, 50px 50px, 50px 50px;
+        }
+
+        .dossier-card {
+            width: 100%;
+            max-width: 900px;
+            background: var(--panel-glass);
+            border: 1px solid var(--neon-red);
+            backdrop-filter: blur(15px);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            position: relative;
+            box-shadow: 0 0 50px rgba(255, 0, 60, 0.2);
+        }
+
+        /* Tactical Header Tab */
+        .dossier-card::before {
+            content: 'COMMAND_ACCESS_GRANTED';
+            position: absolute;
+            top: -12px; left: 30px;
+            background: var(--neon-red);
+            color: white;
+            font-size: 10px;
+            padding: 2px 12px;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .left-sector {
+            padding: 40px;
+            border-right: 1px solid rgba(255, 0, 60, 0.2);
+            background: rgba(255, 0, 60, 0.02);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .right-sector { padding: 40px; display: flex; flex-direction: column; }
+
+        /* Profile Avatar Frame */
+        .avatar-frame {
+            width: 220px;
+            height: 220px;
+            border: 2px solid var(--neon-red);
+            background: #111;
+            margin-bottom: 25px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .avatar-frame {
+    width: 220px;
+    height: 220px;
+    border: 2px solid var(--neon-red);
+    background: #111;
+    margin-bottom: 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* This crops the edges so it stays a square */
+}
+
+/* Add this new section right below it */
+.avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* This is the magic line that makes it fit perfectly */
+    object-position: top; /* This ensures your head isn't cut off */
+}
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            letter-spacing: 6px;
+            color: #fff;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .uid-tag { font-size: 11px; color: var(--neon-red); margin-bottom: 30px; letter-spacing: 2px; }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .stat-box {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 12px;
+        }
+
+        .label { font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+        .value { font-family: 'Orbitron', sans-serif; font-size: 1.3rem; color: var(--neon-red); display: block; }
+
+        .bio-text { font-size: 0.85rem; line-height: 1.6; color: #ccc; margin-bottom: 30px; }
+
+        .btn-back {
+            margin-top: auto;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 15px;
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            transition: 0.4s;
+        }
+
+        .btn-back:hover {
+            background: #fff;
+            color: #000;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+        @media (max-width: 768px) {
+            .left-sector { border-right: none; border-bottom: 1px solid rgba(255, 0, 60, 0.2); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dossier-card">
+        <div class="left-sector">
+            <div class="avatar-frame">
+    <img src="supremezx.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+            <div class="stat-box" style="width: 100%; text-align: center;">
+                <span class="label">SQUAD RANK</span>
+                <span class="value">LEVEL 71</span>
+            </div>
+            <p style="margin-top: 20px; font-size: 9px; opacity: 0.5;">UPLINK_STATUS: SECURE</p>
+        </div>
+
+        <div class="right-sector">
+            <p style="color: var(--neon-red); font-size: 0.7rem; letter-spacing: 3px; margin-bottom: 5px;">// SUPREME_LEADER_DATA</p>
+            <h1>SupremezX</h1>
+            <div class="uid-tag">UID: 2269167330</div>
+
+            <div class="stat-grid">
+                <div class="stat-box"><span class="label">K/D Ratio</span><span class="value">5.12</span></div>
+                <div class="stat-box"><span class="label">Headshot %</span><span class="value">74.8%</span></div>
+                <div class="stat-box"><span class="label">Total Likes</span><span class="value">10755</span></div>
+                <div class="stat-box"><span class="label">Win Rate</span><span class="value">92%</span></div>
+            </div>
+
+            <p class="label">Personnel Bio</p>
+            <p class="bio-text">
+                Founding leader of the ZED X protocol. Specializes in frontline tactical dominance and high-precision combat operations. Known for maintaining a steady 70%+ headshot rate in extreme pressure scenarios.
+            </p>
+
+            <a href="index.html" class="btn-back">RETURN TO COMMAND</a>
+        </div>
+    </div>
+
+</body>
+</html>
+

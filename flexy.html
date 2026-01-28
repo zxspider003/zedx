@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZED X // PERSONNEL FILE: FLEXY [ALL-ROUNDER]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-amber: #ffae00;
+            --bg-black: #050505;
+            --panel-glass: rgba(255, 255, 255, 0.02);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: crosshair; }
+
+        body {
+            background: var(--bg-black);
+            color: #fff;
+            font-family: 'JetBrains Mono', monospace;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(255, 174, 0, 0.08) 0%, transparent 70%),
+                linear-gradient(rgba(255, 174, 0, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 174, 0, 0.05) 1px, transparent 1px);
+            background-size: 100% 100%, 50px 50px, 50px 50px;
+        }
+
+        .dossier-card {
+            width: 100%;
+            max-width: 900px;
+            background: var(--panel-glass);
+            border: 1px solid var(--neon-amber);
+            backdrop-filter: blur(15px);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            position: relative;
+            box-shadow: 0 0 50px rgba(255, 174, 0, 0.2);
+        }
+
+        .dossier-card::before {
+            content: 'VERSATILE_UNIT_CONFIRMED';
+            position: absolute;
+            top: -12px; left: 30px;
+            background: var(--neon-amber);
+            color: black;
+            font-size: 10px;
+            padding: 2px 12px;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .left-sector {
+            padding: 40px;
+            border-right: 1px solid rgba(255, 174, 0, 0.2);
+            background: rgba(255, 174, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .right-sector { padding: 40px; display: flex; flex-direction: column; }
+
+        .avatar-frame {
+    width: 220px;
+    height: 220px;
+    border: 2px solid var(--neon-amber);
+    background: #000;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden; /* This crops the extra parts of the photo */
+    display: flex;
+}
+
+.avatar-frame img {
+    width: 100%;       /* Forces width to fill the box */
+    height: 100%;      /* Forces height to fill the box */
+    object-fit: cover; /* MAGIC LINE: Stretches/Crops to fill without distortion */
+    object-position: center top; /* Keeps your face centered */
+}
+
+
+        .avatar-frame::after {
+            content: 'TOTAL_ADAPTATION';
+            font-size: 10px;
+            color: var(--neon-amber);
+            animation: pulse 1s infinite;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            letter-spacing: 4px;
+            color: #fff;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .uid-tag { font-size: 11px; color: var(--neon-amber); margin-bottom: 30px; letter-spacing: 2px; }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .stat-box {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 12px;
+        }
+
+        .label { font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+        .value { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; color: var(--neon-amber); display: block; }
+
+        .bio-text { font-size: 0.85rem; line-height: 1.6; color: #ccc; margin-bottom: 30px; }
+
+        .btn-back {
+            margin-top: auto;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid var(--neon-amber);
+            padding: 15px;
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            transition: 0.4s;
+        }
+
+        .btn-back:hover {
+            background: var(--neon-amber);
+            color: #000;
+            box-shadow: 0 0 30px rgba(255, 174, 0, 0.5);
+        }
+
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+        @media (max-width: 768px) {
+            .left-sector { border-right: none; border-bottom: 1px solid rgba(255, 174, 0, 0.2); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dossier-card">
+        <div class="left-sector">
+            <div class="avatar-frame">
+    <img src="tanka.jpg" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+</div>
+
+            <div class="stat-box" style="width: 100%; text-align: center;">
+                <span class="label">LEVEL</span>
+                <span class="value">56</span>
+            </div>
+            <p style="margin-top: 20px; font-size: 9px; opacity: 0.8; color: var(--neon-amber);">SKILLSET: MASTERED</p>
+        </div>
+
+        <div class="right-sector">
+            <p style="color: var(--neon-amber); font-size: 0.7rem; letter-spacing: 3px; margin-bottom: 5px;">// ALL_ROUNDER_CORE</p>
+            <h1>ZX_Flexy_R7</h1>
+            <div class="uid-tag">UID: 4291354116</div>
+
+            <div class="stat-grid">
+                <div class="stat-box"><span class="label">K/D Ratio</span><span class="value">4.85</span></div>
+                <div class="stat-box"><span class="label">Headshot %</span><span class="value">72.4%</span></div>
+                <div class="stat-box"><span class="label">Versatility</span><span class="value">99.9%</span></div>
+                <div class="stat-box"><span class="label">Role</span><span class="value" style="font-size: 0.8rem;">All-Rounder</span></div>
+            </div>
+
+            <p class="label">Combat Speciality</p>
+            <p class="bio-text">
+                <span style="color: var(--neon-amber);">[ OVERALL ALL-ROUNDER ]</span><br>
+                The tactical Swiss Army knife of ZED X. Whether it's aggressive rushing, long-range support, or solo Battle Royale survival, Flexy adapts instantly. His nature is aggressive, but his gameplay is calculated—making him dangerous in every sector of the map.
+            </p>
+
+            <a href="index.html" class="btn-back">RETURN TO COMMAND</a>
+        </div>
+    </div>
+
+</body>
+</html>
